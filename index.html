@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Downloader</h1>
+        <p>ダウンロードしたいYouTubeのURLを入力し、オプションを選択してください。</p>
+        
+        <form id="downloadForm">
+            <label for="url">YouTube URL:</label>
+            <input type="text" id="url" name="url" required>
+            
+            <label for="type">ダウンロード形式:</label>
+            <select id="type" name="type">
+                <option value="video">動画</option>
+                <option value="audio">音声</option>
+            </select>
+            
+            <label for="quality">クオリティ:</label>
+            <select id="quality" name="quality">
+                <option value="high">高</option>
+                <option value="medium">中</option>
+                <option value="low">低</option>
+            </select>
+            
+            <button type="submit">ダウンロード開始</button>
+        </form>
+        
+        <p id="statusMessage"></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
