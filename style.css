@@ -1,18 +1,107 @@
-body {
-    font-family: Arial, sans-serif;
+/* style.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
 }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    color: #333;
+    margin: 0;
+}
+
 .container {
-    width: 400px;
-    margin: 50px auto;
+    max-width: 480px;
+    width: 100%;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
     text-align: center;
 }
+
 h1 {
+    font-size: 1.8rem;
     color: #333;
+    margin-bottom: 1.5rem;
 }
+
+p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
 form {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
-label, input, select, button {
-    margin: 10px 0;
+
+label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.25rem;
+    text-align: left;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f9fafb;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+button:active {
+    background-color: #1e40af;
+}
+
+a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #1e40af;
+}
+
+#statusMessage {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1rem;
 }
