@@ -27,13 +27,16 @@
         <option value="low">低</option>
       </select>
 
-      <label for="cookies">クッキー（必要な場合）:</label>
-      <textarea id="cookies" name="cookies" rows="4" placeholder="例: SID=xxx; HSID=xxx;"></textarea>
+      <label for="cookies">クッキー（Netscape形式・必要な場合）:</label>
+      <textarea id="cookies" name="cookies" rows="4" placeholder="# Netscape HTTP Cookie File&#10;.example.com	TRUE	/	FALSE	2147483647	NAME	value"></textarea>
 
       <button type="submit">ダウンロード開始</button>
     </form>
 
+    <progress id="progressBar" value="0" max="100" style="width: 100%; display: none;"></progress>
+    <div id="progressContainer" style="display: none;"></div>
     <p id="statusMessage"></p>
+
     <a href="https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md">対応しているWebサイト一覧</a>
   </div>
 

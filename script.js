@@ -1,10 +1,10 @@
-
 document.getElementById("downloadForm").addEventListener("submit", async function (event) {
     event.preventDefault();
 
     const url = document.getElementById("url").value;
     const type = document.getElementById("type").value;
     const quality = document.getElementById("quality").value;
+    const cookies = document.getElementById("cookies").value;
 
     const statusMessage = document.getElementById("statusMessage");
     const progressBar = document.getElementById("progressBar");
@@ -12,6 +12,7 @@ document.getElementById("downloadForm").addEventListener("submit", async functio
 
     statusMessage.textContent = "準備中...";
     progressContainer.style.display = "block";
+    progressBar.style.display = "block";
     progressBar.value = 0;
 
     try {
@@ -80,8 +81,8 @@ document.getElementById("downloadForm").addEventListener("submit", async functio
     } finally {
         setTimeout(() => {
             progressContainer.style.display = "none";
+            progressBar.style.display = "none";
             progressBar.value = 0;
-        }, 5000); // 5秒後に非表示
+        }, 5000);
     }
 });
-
