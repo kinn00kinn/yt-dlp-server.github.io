@@ -22,7 +22,7 @@ document.getElementById("downloadForm").addEventListener("submit", async functio
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ url, type, quality })
+            body: JSON.stringify({ url, type, quality, cookies })
         });
 
         if (response.status === 429) {
